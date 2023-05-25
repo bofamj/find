@@ -2,14 +2,14 @@
 import { useState } from "react";
 import ReviewCard from "./ReviewCard";
 import ReviewForm from "./ReviewForm";
-import { useRouter } from "next/navigation";
+//import { useRouter } from "next/navigation";
 
 const Reviews = ({ reviews, restaurant_id }) => {
   const [isReviws, setIsReviws] = useState(false);
-  const router = useRouter();
+  //const router = useRouter();
   if (isReviws) {
-    //window.location.reload(true);
-    router.prefetch;
+    window.location.reload(true);
+    //router.prefetch;
     setIsReviws(false);
   }
   return (
