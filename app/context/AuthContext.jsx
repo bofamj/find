@@ -2,7 +2,9 @@
 import axios from "axios";
 import { getCookie } from "cookies-next";
 import { useState, createContext, useEffect } from "react";
-const URL = "http://localhost:3000/api/auth/";
+//http://localhost:3000
+const URL = "/api/auth/";
+
 export const AuthantcationContaxt = createContext({
   loading: false,
   data: null,
@@ -48,7 +50,7 @@ export default function AuthContext({ children }) {
     } catch (error) {
       setAuth({
         loading: false,
-        error: error.response.data.errorMessage,
+        error: error,
         data: null,
       });
     }

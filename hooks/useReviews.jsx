@@ -14,10 +14,12 @@ export default function useReviews() {
     user_id,
   }) => {
     setLoading(true);
-
+    //`https://find-five.vercel.app/api/restaurant/${slug}/reviews`,
+    //http://localhost:3000
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/restaurant/${slug}/reviews`,
+        `/api/restaurant/${slug}/reviews`,
+
         {
           restaurant_id,
           first_name,

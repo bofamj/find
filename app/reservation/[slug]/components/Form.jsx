@@ -9,6 +9,7 @@ import Link from "next/link";
 
 const Form = ({ slug, searchParams }) => {
   const { data } = useContext(AuthantcationContaxt);
+  //console.log("🚀 ~ file: Form.jsx:12 ~ Form ~ data:", data);
 
   const [disabled, setDisabled] = useState(true);
   const [success, setSuccess] = useState(false);

@@ -2,7 +2,9 @@ import axios from "axios";
 import { useContext } from "react";
 import { AuthantcationContaxt } from "../app/context/AuthContext";
 import { removeCookies } from "cookies-next";
-const URL = "http://localhost:3000/api/auth/";
+//http://localhost:3000
+const URL = "/api/auth/";
+
 const useAuth = () => {
   const { loading, data, error, setAuth } = useContext(AuthantcationContaxt);
 

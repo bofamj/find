@@ -19,10 +19,11 @@ export default function useBooking() {
     setSuccess,
   }) => {
     setLoading(true);
-
+    //`https://find-five.vercel.app/api/restaurant/${slug}/reserve?day=${day}&time=${time}&partySize=${partySize}`
+    //http://localhost:3000
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/restaurant/${slug}/reserve?day=${day}&time=${time}&partySize=${partySize}`,
+        `/api/restaurant/${slug}/reserve?day=${day}&time=${time}&partySize=${partySize}`,
         {
           bookerEmail,
           bookerPhone,
@@ -38,7 +39,8 @@ export default function useBooking() {
       return response.data;
     } catch (error) {
       setLoading(false);
-      setError(error.response.data.errorMessage);
+      //setError(error.response.data.errorMessage);
+      setError(error.message);
     }
   };
 
