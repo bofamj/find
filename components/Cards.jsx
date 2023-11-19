@@ -14,6 +14,7 @@ const Cards = ({ restaurant }) => {
     reviews,
     booking,
   } = restaurant;
+  console.log("🚀 ~ file: Cards.jsx:17 ~ Cards ~ reviews:", reviews);
 
   const dateAndTime = new Date().toISOString(); //* change the date to a string
   const date = dateAndTime.split("T")[0]; //* get the date

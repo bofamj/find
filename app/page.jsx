@@ -27,6 +27,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default async function Home() {
   const restaurants = await handler();
+  console.log("🚀 ~ file: page.jsx:30 ~ Home ~ restaurants:", restaurants);
 
   return (
     <main>
